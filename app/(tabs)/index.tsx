@@ -1,10 +1,11 @@
-import { Text, View } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
 
 export default function Index() {
   return (
-    <View className="flex-1 justify-center items-center bg-primary">
-  <Text className="text-white text-2xl font-bold">Welcome</Text>
+    <View className="justify-center items-center flex-1">
+  <Text className=" text-secondary text-2xl font-bold">Welcome</Text>
 </View>
 
   );
 }
+
