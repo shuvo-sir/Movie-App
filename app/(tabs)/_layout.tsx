@@ -101,7 +101,7 @@ const _layout = () => {
                     <TabIcon 
                         focused={focused}
                         icon={icons.person}
-                        title="Home"
+                        title="Profile"
                     />
                 )
             }}
