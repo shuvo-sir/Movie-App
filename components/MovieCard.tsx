@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from 'expo-router'
 import { icons } from '@/constants/icons'
 
-const MovieCard = ({id, poster_path, title, vote_average, relese_date} : Movie) => {
+const MovieCard = ({id, poster_path, title, vote_average, release_date} : Movie) => {
   return (
     <Link href={`/movies/${id}`} asChild>
         <TouchableOpacity className=' w-[30%]'>
@@ -16,12 +16,22 @@ const MovieCard = ({id, poster_path, title, vote_average, relese_date} : Movie) 
 
             <Text className=' text-sm font-bold text-white mt-2'>{title}</Text>
 
-            <View className=' flex-row items-center justify-start gap-x-1'>
-                <Image source={icons.star}
-                className='size-4'
-                />
-                <Text className=' text-xs text-white font-bold uppercase'>{Math.round(vote_average / 2)}</Text>
+            <View className='flex-row items-center justify-between'>
+                
+            {/* Left Side: Star Icon + Rating */}
+            <View className='flex-row items-center gap-x-1'>
+                <Image source={icons.star} className='size-4' />
+                <Text className='text-xs text-white font-bold uppercase'>
+                {Math.round(vote_average / 2)}
+                </Text>
             </View>
+
+            {/* Right Side: Release Date */}
+            <Text className='text-xs text-light-300 font-medium'>
+                {release_date?.substring(0, 4) || 'N/A'}
+            </Text>
+            </View>
+
         </TouchableOpacity>
     </Link>
   )
