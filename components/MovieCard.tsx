@@ -16,8 +16,8 @@ const MovieCard = ({id, poster_path, title, vote_average, release_date} : Movie)
 
             <Text className=' text-sm font-bold text-white mt-2'>{title}</Text>
 
-            <View className='flex-row items-center justify-between'>
-                
+            <View className='flex-row items-center justify-between mt-1'>
+
             {/* Left Side: Star Icon + Rating */}
             <View className='flex-row items-center gap-x-1'>
                 <Image source={icons.star} className='size-4' />
