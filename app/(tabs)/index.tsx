@@ -1,7 +1,7 @@
 import SearchBar from "@/components/SearchBar";
 import { icons } from "@/constants/icons";
 import { images } from "@/constants/images";
-import { Text, View, Image, ScrollView, ActivityIndicator } from "react-native";
+import { Text, View, Image, ScrollView, ActivityIndicator, FlatList } from "react-native";
 import { useRouter } from "expo-router";
 import useFetch from "@/services/useFetch";
 import { fetchMovies } from "@/services/api";
@@ -45,6 +45,14 @@ export default function Index() {
 
                   <>
                     <Text className="text-lg text-white font-bold mt-5 mb-3">Latest Movies</Text>
+
+                    <FlatList
+                      data={movies}
+                      renderItem={({item}) =>(
+                        <Text className="text-white text-sm">{item.title}</Text>
+                      )}
+                      keyExtractor={(item) => item.id.toString()}
+                    />
                   </>
             </View>
             )}
