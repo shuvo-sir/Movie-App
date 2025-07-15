@@ -14,7 +14,7 @@ const MovieCard = ({id, poster_path, title, vote_average, release_date} : Movie)
             resizeMode="cover"
             />
 
-            <Text className=' text-sm font-bold text-white mt-2'>{title}</Text>
+            <Text className=' text-sm font-bold text-white mt-2' numberOfLines={1}>{title}</Text>
 
             <View className='flex-row items-center justify-between mt-1'>
 
@@ -27,7 +27,7 @@ const MovieCard = ({id, poster_path, title, vote_average, release_date} : Movie)
             </View>
 
             {/* Right Side: Release Date */}
-            <Text className='text-xs text-light-300 font-medium'>
+            <Text className='text-xs text-light-300 mr-1'>
                 {release_date?.substring(0, 4) || 'N/A'}
             </Text>
             </View>
