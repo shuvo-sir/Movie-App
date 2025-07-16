@@ -49,5 +49,4 @@ export const updateSearchCount = async(query: string, movie: Movie) => {
         console.log('====================================');
         throw error;
     }
-
 }
