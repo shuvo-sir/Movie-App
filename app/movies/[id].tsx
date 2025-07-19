@@ -22,7 +22,6 @@ const MovieDetails = () => {
       </ScrollView>
     </View>
   )
-  
 }
 
 export default MovieDetails
