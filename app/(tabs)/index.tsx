@@ -35,7 +35,7 @@ export default function Index() {
                 contentContainerStyle={{ minHeight: "100%", paddingBottom: 10 }}
               >
 
-            <Image source={icons.logo} className=" w-12 h-10 mt-20 mb-5 mx-auto"/>
+            <Image source={icons.logo} className=" w-12 h-10 mt-10 mb-5 mx-auto"/>
 
             {moviesLoading || trendingLoading ? (
               <ActivityIndicator
