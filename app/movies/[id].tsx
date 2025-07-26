@@ -79,4 +79,3 @@ const MovieDetails = () => {
   )
 }
 export default MovieDetails
-g
