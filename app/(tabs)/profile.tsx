@@ -10,6 +10,7 @@ const profile = () => {
           className=' size-10'
           tintColor={"#fff"}
         />
+        
         <Text className=' text-gray-500 text-base'>Profile</Text>
       </View>
     </View>
